@@ -131,7 +131,7 @@ img {
 
 .hero-title {
   margin: 0 auto 48px;
-  width: 496px;
+  max-width: 496px;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
@@ -145,6 +145,9 @@ img {
   margin: 0 auto;
   padding: 16px 32px;
   border-radius: 4px;
+  min-width: 169px;
+  height: 56px;
+  border: none;
   font-family: 'Roboto', sans-serif;
   background: #4d5ae5;
   font-weight: 500;
@@ -162,8 +165,17 @@ img {
 /* #endregion Hero */
 
 /* #region Advantages */
-.benefits-title {
-  visibility: hidden;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .benefits-list {
@@ -221,7 +233,7 @@ img {
 }
 
 .name-team-container {
-  margin: 32px 16px;
+  margin: 32px 0;
 }
 
 .team-item {
@@ -300,9 +312,12 @@ img {
 }
 
 .footer-logo .logo-part {
+  color: #f4f4fd;
+}
+
+.footer .logo {
   display: inline-block;
   margin-bottom: 18px;
-  color: #f4f4fd;
 }
 
 .footer-text {
